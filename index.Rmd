@@ -1,7 +1,7 @@
 ---
 title: "SOCR 580 Assignment 1"
 author: "Alex Siggers"
-date: "1/27/2022"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
     toc: true
@@ -82,12 +82,7 @@ dygraph(q_xts) %>%
 
 # Assignment. 
 
-###### 1,2,3,4,5,6 completed ######
-
-7) Use the GitHub -> Settings -> Pages tab to create a website of your report.
-
-8) Bonus, make the timestamp in the header dynamic. As in it only adds
-todays date, not just a static date you enter. 
+###### 1,2,3,4,5,6,7,8 completed ######
 
 9) Bonus, create an "index_talk.Rmd" version of your document using the
 `revealjs` package. Add link to your original report-style document. 
@@ -101,6 +96,7 @@ todays date, not just a static date you enter.
 
 dygraph(q_xts) %>%
   dyAxis("y", label = "Discharge (cfs)") %>%
+  dyAxis("x", label = "Time")%>%
    dyOptions(drawPoints = TRUE, pointSize = 2)
 ```
 
