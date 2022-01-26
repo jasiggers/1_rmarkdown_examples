@@ -35,6 +35,7 @@ The Poudre River at Lincoln Bridge is:
 
 ![](https://waterdata.usgs.gov/nwisweb/local/state/co/text/pics/06752260big.jpg)
 
+Colorado's Front Range would not be the same without the critical flow of the Cache la Poudre (*POO-der*) River. The headwaters begin high in the Rocky Mountains, initiating a 125-mile journey (https://poudreheritage.org/wp-content/uploads/poudremapgeneral-1.jpg) that drops an astounding **7,000 feet** of elevation on its way to the grasslands of northeastern Colorado. As with many of Colorado's major rivers, the 'Poudre' has played a crucial role in the development of agriculture, economy, recreation, and even water laws- more on this here (https://poudreheritage.org/water-war-and-law/). A ride up the Poudre River Canyon from Fort Collins will quickly reveal the impact that the river has had on the geology of the region. **Steep** drop-offs (https://coloradoencyclopedia.org/sites/default/files/Cache_la_Poudre_River_02.jpg) play host to numerous ecosystem types, and consequently, a variety of organisms including mountain mahogany, sagebrush, bighorn sheep, and even **mountain lions**. The importance of this river is difficult to overstate, so conservation of this beauty must remain a focal point of local communities' agendas. 
 
 ## Data Acquisition and Plotting tests
 
@@ -76,7 +77,8 @@ q_xts <- xts(q$q, order.by = q$Date)
 
 
 dygraph(q_xts) %>%
-  dyAxis("y", label = "Discharge (cfs)") 
+  dyAxis("y", label = "Discharge (cfs)") %>%
+   dyOptions(drawPoints = TRUE, pointSize = 2)
 ```
 
 
@@ -88,18 +90,7 @@ This assignment will be primarily about demonstrating some expertice in using
 RMarkdown, since we will be using Rmds as the primary form of homework and 
 assignments. With that in mind, your assignment for this homework is to:
 
-###### 1,2 completed ######
-
-3) Create a table of contents that is floating, but displays three levels of
-headers instead of two (by editing the content at the beginning of the document)
-
-4) Make a version of the `dygraph` with points and lines by using rstudio's
-dygraph [guide](https://rstudio.github.io/dygraphs/)
-
-5) Writing a paragraph on the Poudre river with at least three hyperlinks,
-**two bolded sections**, and one *italicized phrase*. The content of this paragraph
-is not vital, but try to at least make it true and interesting, and, of course,
-don't plagiarize. 
+###### 1,2,3,4,5 completed ######
 
 6) Knit that document, and then git commit and push to your personal GitHub.
 
