@@ -36,9 +36,9 @@ The Poudre River at Lincoln Bridge is:
 ![](https://waterdata.usgs.gov/nwisweb/local/state/co/text/pics/06752260big.jpg)
 
 
-## Data Acquisition and Plotting tests
+### Data Acquisition and Plotting tests
 
-## Data Download
+### Data Download
 
 
 ```{r downloader}
@@ -54,7 +54,7 @@ q <- readNWISdv(siteNumbers = '06752260',
 
 
 
-## Static Data Plotter
+### Static Data Plotter
 
 
 ```{r, warning = FALSE, fig.width = 8, fig.height = 5}
@@ -67,7 +67,7 @@ ggplot(q, aes(x = Date, y = q)) +
 ```
 
 
-## Interactive Data Plotter
+### Interactive Data Plotter
 
 
 ```{r}
