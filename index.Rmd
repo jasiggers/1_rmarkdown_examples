@@ -1,5 +1,5 @@
 ---
-title: "Assignment 1"
+title: "SOCR 580 Assignment 1"
 author: "Alex Siggers"
 date: "1/27/2022"
 output:
@@ -34,8 +34,6 @@ The Poudre River at Lincoln Bridge is:
 ## SiteDescription
 
 ![](https://waterdata.usgs.gov/nwisweb/local/state/co/text/pics/06752260big.jpg)
-
-Colorado's Front Range would not be the same without the critical flow of the Cache la Poudre (*POO-der*) River. The headwaters begin high in the Rocky Mountains, initiating a 125-mile journey (https://poudreheritage.org/wp-content/uploads/poudremapgeneral-1.jpg) that drops an astounding **7,000 feet** of elevation on its way to the grasslands of northeastern Colorado. As with many of Colorado's major rivers, the 'Poudre' has played a crucial role in the development of agriculture, economy, recreation, and even water laws- more on this here (https://poudreheritage.org/water-war-and-law/). A ride up the Poudre River Canyon from Fort Collins will quickly reveal the impact that the river has had on the geology of the region. **Steep** drop-offs (https://coloradoencyclopedia.org/sites/default/files/Cache_la_Poudre_River_02.jpg) play host to numerous ecosystem types, and consequently, a variety of organisms including mountain mahogany, sagebrush, bighorn sheep, and even **mountain lions**. The importance of this river is difficult to overstate, so conservation of this beauty must remain a focal point of local communities' agendas. 
 
 ## Data Acquisition and Plotting tests
 
@@ -77,22 +75,14 @@ q_xts <- xts(q$q, order.by = q$Date)
 
 
 dygraph(q_xts) %>%
-  dyAxis("y", label = "Discharge (cfs)") %>%
-   dyOptions(drawPoints = TRUE, pointSize = 2)
+  dyAxis("y", label = "Discharge (cfs)")
 ```
 
 
 
 # Assignment. 
 
-
-This assignment will be primarily about demonstrating some expertice in using
-RMarkdown, since we will be using Rmds as the primary form of homework and 
-assignments. With that in mind, your assignment for this homework is to:
-
-###### 1,2,3,4,5 completed ######
-
-6) Knit that document, and then git commit and push to your personal GitHub.
+###### 1,2,3,4,5,6 completed ######
 
 7) Use the GitHub -> Settings -> Pages tab to create a website of your report.
 
@@ -107,8 +97,16 @@ todays date, not just a static date you enter.
 
 ## DyGraph example. 
 
+```{r}
+
+dygraph(q_xts) %>%
+  dyAxis("y", label = "Discharge (cfs)") %>%
+   dyOptions(drawPoints = TRUE, pointSize = 2)
+```
+
 
 ## Poudre Paragraph
 
+Colorado's Front Range would not be the same without the critical flow of the Cache la Poudre (*POO-der*) River. The headwaters begin high in the Rocky Mountains, initiating a 125-mile journey (https://poudreheritage.org/wp-content/uploads/poudremapgeneral-1.jpg) that drops an astounding **7,000 feet** of elevation on its way to the grasslands of northeastern Colorado. As with many of Colorado's major rivers, the 'Poudre' has played a crucial role in the development of agriculture, economy, recreation, and even water laws- more on this here (https://poudreheritage.org/water-war-and-law/). A ride up the Poudre River Canyon from Fort Collins will quickly reveal the impact that the river has had on the geology of the region. **Steep** drop-offs (https://coloradoencyclopedia.org/sites/default/files/Cache_la_Poudre_River_02.jpg) play host to numerous ecosystem types, and consequently, a variety of organisms including mountain mahogany, sagebrush, bighorn sheep, and even **mountain lions**. The importance of this river is difficult to overstate, so conservation of this beauty must remain a focal point of local communities' agendas. 
 
 
